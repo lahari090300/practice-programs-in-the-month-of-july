@@ -12,7 +12,8 @@ def partition(list1,first,last):
         else:
             list1[left],list1[right]=list1[right],list1[left]
     list1[first],list1[right]=list1[right],list1[first]
-    return right 
+    return right
+
 def qsort(list1,first,last):
     if len(list1)==1:
         return list1
@@ -22,6 +23,7 @@ def qsort(list1,first,last):
         pivot_index_place=partition(list1,first,last)
         qsort(list1,first,pivot_index_place-1)
         qsort(list1,pivot_index_place+1,last)
+        
 list1=[56,34,8,7,3,45]
 qsort(list1,0,len(list1)-1)
 print(list1)
